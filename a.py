@@ -1,7 +1,7 @@
 import random
 from GoodSolver import  GoodSolver
 from BetterSolver import  BetterSolver
-
+random.seed(1)
 
 from time import sleep
 
@@ -10,7 +10,7 @@ from time import sleep
 width=30
 height=30
 
-width=22
+width=30
 height=width
 
 #FIXME: how to create interface in python?
@@ -49,7 +49,7 @@ def test_maze(m):
   target=(width-2,height-2)
   while queue:
     t=queue.pop()
-    print(t)
+    #print(t)
     if t == target:
       return True
     if t in reachable:
@@ -58,13 +58,13 @@ def test_maze(m):
     for i in poslist(t):  
       if (m[i[0]][i[1]] ==0 ):
         queue.append(i)
-        print("append:",i)
+        #print("append:",i)
   return False
   
 def generate_good_maze():
   m=generate_maze()
   while not test_maze(m):
-    print_maze(m)
+    #print_maze(m)
     m=generate_maze()
   return m
 
@@ -91,7 +91,7 @@ print_maze(maze)
 
 #s=RandomSolver()
 s=GoodSolver()
-s=BetterSolver()
+#s=BetterSolver()
 
 class empty:
  pass
