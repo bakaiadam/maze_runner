@@ -1,14 +1,16 @@
 import random
 from GoodSolver import  GoodSolver
+from BetterSolver import  BetterSolver
+
 
 from time import sleep
 
 
 
-width=10
-height=10
+width=30
+height=30
 
-width=10
+width=22
 height=width
 
 #FIXME: how to create interface in python?
@@ -89,6 +91,7 @@ print_maze(maze)
 
 #s=RandomSolver()
 s=GoodSolver()
+s=BetterSolver()
 
 class empty:
  pass
