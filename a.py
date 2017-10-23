@@ -1,4 +1,5 @@
 import random
+from GoodSolver import  GoodSolver
 
 from time import sleep
 
@@ -86,7 +87,8 @@ def print_maze(m,p=None):
 maze=generate_good_maze()
 print_maze(maze)
 
-s=RandomSolver()
+#s=RandomSolver()
+s=GoodSolver()
 
 class empty:
  pass
